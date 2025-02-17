@@ -31,10 +31,11 @@ export default {
   computed: {
     fullPosterUrl() {
       return this.movie && this.movie.poster_image
-        ? `http://127.0.0.1:8080/storage/posters/${this.movie.poster_image}`
+        ? this.movie.poster_image // ✅ Përdor URL-në e saktë nga backend
         : 'https://via.placeholder.com/350x500?text=No+Image'
     },
   },
+
   methods: {
     async fetchMovieDetails() {
       const movieId = this.$route.params.id

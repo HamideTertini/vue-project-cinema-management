@@ -89,53 +89,55 @@ export default {
   margin: auto;
   padding: 40px;
   text-align: center;
-  border-radius: 12px;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #222;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .filters {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .search-box,
 .category-dropdown {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
   background: white;
   transition: all 0.3s ease;
-  width: 250px;
+  width: 280px;
 }
 
 .search-box:focus,
 .category-dropdown:focus {
   outline: none;
   border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
 }
 
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   justify-content: center;
 }
 
 .movie-card {
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -144,52 +146,58 @@ export default {
 }
 
 .movie-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .movie-poster {
   width: 100%;
-  height: 150px;
+  height: 270px;
   object-fit: cover;
 }
 
 .movie-info {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
 }
 
 .movie-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #333;
+  color: #222;
+  margin-bottom: 3px;
 }
 
 .movie-category {
   font-size: 1rem;
-  color: #666;
-  margin-bottom: 8px;
+  color: #000000;
+  font-style: italic;
+  margin-bottom: 2px;
 }
 
 .movie-synopsis {
   font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 12px;
+  color: #666;
+  margin-bottom: 3px;
   min-height: 40px;
+  text-align: justify;
 }
 
 .view-more-btn {
-  padding: 8px 16px;
+  padding: 10px 16px;
   background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
-  transition: background 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.2s;
 }
 
 .view-more-btn:hover {
   background: #0056b3;
+  transform: scale(1.05);
 }
 </style>
