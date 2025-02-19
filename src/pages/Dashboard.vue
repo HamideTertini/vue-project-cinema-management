@@ -144,11 +144,11 @@ export default {
 }
 
 .movies {
-  background: #007bff;
+  background: #03274d;
 }
 
 .categories {
-  background: #28a745;
+  background: #383d4e;
 }
 
 .latest-movie {

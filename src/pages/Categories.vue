@@ -39,22 +39,55 @@ export default {
 </script>
 
 <style scoped>
+/* Kontejneri kryesor */
 .categories-container {
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  margin: auto;
+  margin: 40px auto;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
+
+/* Titulli */
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Butoni "Add Category" */
 .add-btn {
-  padding: 10px 15px;
-  background: #007bff;
+  padding: 12px 18px;
+  background: #323941;
   color: white;
+  font-size: 16px;
+  font-weight: 500;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Efekt hover për butonin */
+.add-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Efekt kur butoni shtypet */
+.add-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Background i pastër për gjithë faqen */
+body {
+  background: #f4f7fc;
+  font-family: 'Inter', sans-serif;
 }
 </style>

@@ -20,12 +20,6 @@
             required
           />
         </div>
-        <div class="input-group">
-          <select v-model="role">
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
-        </div>
         <button type="submit" class="register-btn">Register</button>
       </form>
       <p>Ke një llogari? <router-link to="/login" class="link">Kyçu</router-link></p>
@@ -45,7 +39,6 @@ export default {
     const email = ref('')
     const password = ref('')
     const password_confirmation = ref('')
-    const role = ref('user') // Default user
     const authStore = useAuthStore()
     const router = useRouter()
     const errorMessage = ref('')
@@ -57,7 +50,6 @@ export default {
           email: email.value,
           password: password.value,
           password_confirmation: password_confirmation.value,
-          role: role.value,
         })
         router.push('/login')
       } catch (error) {
@@ -68,7 +60,7 @@ export default {
       }
     }
 
-    return { name, email, password, password_confirmation, role, handleRegister, errorMessage }
+    return { name, email, password, password_confirmation, handleRegister, errorMessage }
   },
 }
 </script>
@@ -93,8 +85,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-input,
-select {
+input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;

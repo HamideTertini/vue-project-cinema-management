@@ -3,10 +3,17 @@
     <div class="modal-content">
       <h2>{{ category.id ? 'Edit Category' : 'Add Category' }}</h2>
       <form @submit.prevent="saveCategory">
-        <input v-model="categoryData.name" type="text" required placeholder="Enter category name" />
-        <div class="modal-actions">
-          <button type="submit">{{ category.id ? 'Update' : 'Save' }}</button>
-          <button type="button" @click="$emit('close')">Cancel</button>
+        <label for="name">Category Name:</label>
+        <input
+          v-model="categoryData.name"
+          type="text"
+          id="name"
+          required
+          placeholder="Enter category name"
+        />
+        <div class="button-group">
+          <button type="submit" class="primary">{{ category.id ? 'Update' : 'Save' }}</button>
+          <button type="button" class="secondary" @click="$emit('close')">Cancel</button>
         </div>
       </form>
     </div>
@@ -55,22 +62,53 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  height: 90%;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 420px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.modal-actions {
+.modal-content h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+label {
+  display: block;
   margin-top: 10px;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.button-group {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.primary {
+  background: #323941;
+  color: white;
+}
+.secondary {
+  background: #ccc;
+  color: black;
 }
 </style>

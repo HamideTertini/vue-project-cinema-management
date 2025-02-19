@@ -98,7 +98,7 @@ export default {
 .add-btn {
   margin-bottom: 10px;
   padding: 8px 12px;
-  background: #28a745;
+  background: #323941;
   color: white;
   border: none;
   cursor: pointer;

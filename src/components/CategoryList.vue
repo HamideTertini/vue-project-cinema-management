@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>Categories</h2>
     <table>
       <thead>
         <tr>
@@ -56,32 +55,102 @@ export default {
 </script>
 
 <style scoped>
+/* Kontejneri kryesor */
+div {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Titulli */
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Tabela */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
+
+/* Header i tabelës */
 th {
-  background-color: #f4f4f4;
+  background: #323941;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
 }
+
+/* Qelizat e tabelës */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Efekt hover për rreshtat */
+tbody tr:hover {
+  background: #f4f7fc;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Butonat */
 button {
-  margin-right: 5px;
-  padding: 5px 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Butoni Edit */
 button:first-child {
   background: #28a745;
   color: white;
 }
+
+button:first-child:hover {
+  background: #218838;
+}
+
+/* Butoni Delete */
 button:last-child {
   background: #dc3545;
   color: white;
+  margin-left: 8px;
+}
+
+button:last-child:hover {
+  background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 </style>

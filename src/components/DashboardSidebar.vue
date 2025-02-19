@@ -24,7 +24,7 @@ export default {
     logout() {
       const authStore = useAuthStore()
       authStore.logout()
-      this.$router.push('/login')
+      this.$router.push('/')
     },
   },
 }

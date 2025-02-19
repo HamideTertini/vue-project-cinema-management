@@ -89,52 +89,128 @@ export default {
 </script>
 
 <style scoped>
+/* Kontejneri kryesor */
 .movies-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
   padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
+
+/* Titulli */
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Butoni për shtim */
 .add-btn {
-  margin-bottom: 10px;
-  padding: 8px 12px;
+  padding: 10px 15px;
   background: #28a745;
   color: white;
   border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 4px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
-.poster-img {
-  width: 50px;
-  height: auto;
-  border-radius: 4px;
+
+.add-btn:hover {
+  background: #218838;
 }
+
+/* Tabela */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
+
+/* Header i tabelës */
 th {
-  background-color: #f4f4f4;
+  background: #323941;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
 }
+
+/* Qelizat e tabelës */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Efekt hover për rreshtat */
+tbody tr:hover {
+  background: #f4f7fc;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Imazhet e posterit */
+.poster-img {
+  width: 50px;
+  height: 70px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Butonat */
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Butoni Edit */
 .edit-btn {
   background: #007bff;
   color: white;
-  padding: 5px 10px;
-  border: none;
-  margin-right: 5px;
-  cursor: pointer;
 }
+
+.edit-btn:hover {
+  background: #0056b3;
+}
+
+/* Butoni Delete */
 .delete-btn {
   background: #dc3545;
   color: white;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 </style>

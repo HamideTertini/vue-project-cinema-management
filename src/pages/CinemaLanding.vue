@@ -185,7 +185,7 @@ export default {
 
 .view-more-btn {
   padding: 10px 16px;
-  background: #007bff;
+  background: #232c36;
   color: white;
   border: none;
   cursor: pointer;

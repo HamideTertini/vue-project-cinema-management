@@ -31,7 +31,7 @@ export default {
   computed: {
     fullPosterUrl() {
       return this.movie && this.movie.poster_image
-        ? this.movie.poster_image // ✅ Përdor URL-në e saktë nga backend
+        ? this.movie.poster_image
         : 'https://via.placeholder.com/350x500?text=No+Image'
     },
   },
@@ -113,7 +113,7 @@ export default {
   padding: 12px 20px;
   font-size: 1rem;
   border: none;
-  background: #007bff;
+  background: #323941;
   color: white;
   border-radius: 8px;
   cursor: pointer;

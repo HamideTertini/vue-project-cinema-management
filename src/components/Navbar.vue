@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background: #222 !important;
+  background: linear-gradient(135deg, #1f1f1f, #292929);
   color: white;
   padding: 15px 20px;
   position: fixed;
@@ -60,7 +60,8 @@ export default {
   z-index: 1000;
   display: flex;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out;
 }
 
 .container {
@@ -73,15 +74,22 @@ export default {
 
 .logo a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #f4a261;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links li {
@@ -92,11 +100,16 @@ export default {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #c69c6d;
+  background: #f4a261;
+  color: #222;
+  transform: scale(1.05);
 }
 
 .burger {
@@ -105,10 +118,11 @@ export default {
 }
 
 .burger .line {
-  width: 25px;
+  width: 30px;
   height: 3px;
   background: white;
-  margin: 5px;
+  margin: 6px;
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
@@ -119,18 +133,36 @@ export default {
     position: absolute;
     top: 60px;
     right: 0;
-    background: #222;
-    width: 200px;
+    background: rgba(30, 30, 30, 0.95);
+    width: 220px;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
   }
 
   .nav-links.nav-active {
     display: flex;
   }
 
+  .nav-links li {
+    margin: 10px 0;
+  }
+
   .burger {
     display: block;
+  }
+
+  .burger.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 </style>
